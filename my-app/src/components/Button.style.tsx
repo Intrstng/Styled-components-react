@@ -1,16 +1,19 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { MyAnimation } from '../styles/animations/Animation';
 
-export const CardBtn = styled.button<{ primary?: boolean; }>`
+type CardBtnType = {
+  btnType?: 'primary' | 'outlined'
+  colorType: string
+  active?: boolean
+}
+
+const CardBtn = styled.button<CardBtnType>`
   width: 8.6rem;
   height: 3rem;
   border-radius: 0.5rem;
-  border: 0.2rem solid #4E71FE;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${props => props.primary ? "#4E71FE" : "#FFFFFF"};
-  color: ${props => props.primary ? "#FFFFFF" : "#4E71FE"};
   font-family: Inter;
   font-size: 1rem;
   font-style: normal;
@@ -21,4 +24,31 @@ export const CardBtn = styled.button<{ primary?: boolean; }>`
   &:hover {
     transform: scale(1.05);
   }
-`;
+  ${props => props.btnType === 'primary' && css<CardBtnType> `
+    background: ${props => props.colorType || 'green'};
+    border: none;
+    color: #FFFFFF;
+    &:hover {
+      border: 0.2rem solid ${props => props.colorType || 'green'};;
+      background: transparent;
+      color: ${props => props.colorType || 'green'};;
+    }
+  `};
+
+  ${props => props.btnType === 'outlined' && css<CardBtnType> `
+    border: 2px solid ${props.colorType};
+    background: transparent;
+    color: ${props.colorType};
+    &:hover {
+      border: none;
+      background: ${props.colorType};
+      color: #FFFFFF;
+    }
+  `};
+
+  ${props => props.active && css<CardBtnType> `
+      box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.5);
+    `};
+  `;
+
+export default CardBtn;
