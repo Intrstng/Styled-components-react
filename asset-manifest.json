@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/Styled-components-react/static/css/main.073c9b0a.css",
-    "main.js": "/Styled-components-react/static/js/main.77e97dd7.js",
+    "main.css": "/Styled-components-react/static/css/main.e6c13ad2.css",
+    "main.js": "/Styled-components-react/static/js/main.1f0e8adf.js",
     "static/js/787.28cb0dcd.chunk.js": "/Styled-components-react/static/js/787.28cb0dcd.chunk.js",
+    "static/media/3.jpg": "/Styled-components-react/static/media/3.3096b79f7082f74ea744.jpg",
+    "static/media/2.jpg": "/Styled-components-react/static/media/2.1d03dae885a4e914f61b.jpg",
+    "static/media/1.jpg": "/Styled-components-react/static/media/1.26f9218a7485ef02b154.jpg",
     "index.html": "/Styled-components-react/index.html",
-    "main.073c9b0a.css.map": "/Styled-components-react/static/css/main.073c9b0a.css.map",
-    "main.77e97dd7.js.map": "/Styled-components-react/static/js/main.77e97dd7.js.map",
+    "main.e6c13ad2.css.map": "/Styled-components-react/static/css/main.e6c13ad2.css.map",
+    "main.1f0e8adf.js.map": "/Styled-components-react/static/js/main.1f0e8adf.js.map",
     "787.28cb0dcd.chunk.js.map": "/Styled-components-react/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.77e97dd7.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.1f0e8adf.js"
   ]
 }
