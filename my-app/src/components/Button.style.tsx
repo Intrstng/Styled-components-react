@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { MyAnimation } from '../styles/animations/Animation';
+import myTheme from '../styles/Theme.styled';
 
 type CardBtnType = {
   btnType?: 'primary' | 'outlined'
@@ -25,16 +26,15 @@ const CardBtn = styled.button<CardBtnType>`
     transform: scale(1.05);
   }
   ${props => props.btnType === 'primary' && css<CardBtnType> `
-    background: ${props => props.colorType || 'green'};
+    background: ${props => props.colorType || `${myTheme.colors.standart}`};
     border: none;
-    color: #FFFFFF;
+    color: ${myTheme.colors.light};
     &:hover {
-      border: 0.2rem solid ${props => props.colorType || 'green'};;
+      border: 0.2rem solid ${props => props.colorType || `${myTheme.colors.standart}`};
       background: transparent;
-      color: ${props => props.colorType || 'green'};;
+      color: ${props => props.colorType || `${myTheme.colors.standart}`};
     }
   `};
-
   ${props => props.btnType === 'outlined' && css<CardBtnType> `
     border: 2px solid ${props.colorType};
     background: transparent;
@@ -42,12 +42,12 @@ const CardBtn = styled.button<CardBtnType>`
     &:hover {
       border: none;
       background: ${props.colorType};
-      color: #FFFFFF;
+      color: ${myTheme.colors.light};
     }
   `};
 
   ${props => props.active && css<CardBtnType> `
-      box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 4px 20px 5px ${myTheme.colors.shadow};
     `};
   `;
 

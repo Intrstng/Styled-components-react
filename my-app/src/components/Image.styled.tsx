@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import myTheme from '../styles/Theme.styled';
 
 type ImagePropsType = {
   backGround: string;
@@ -9,7 +10,7 @@ const Image = styled.div<ImagePropsType>`
   width: 28rem;
   height: 17rem;
   background-image: ${(props) => `url(${props.backGround})`};
-  background-color: lightgray 50%;
+  background-color: ${myTheme.colors.imgBground} 50%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

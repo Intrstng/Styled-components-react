@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import myTheme from './Theme.styled';
 
 export const GlobalStyles = createGlobalStyle `
   *,
@@ -12,11 +13,14 @@ export const GlobalStyles = createGlobalStyle `
     font-size: 10px;
   }
   body {
-    background-color: #f5f5f5;
+    background-color: ${myTheme.colors.bground};
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    @media ${myTheme.media.tablet} {
+      background-color: ${myTheme.colors.grey.darker};
+    }
   }
 `

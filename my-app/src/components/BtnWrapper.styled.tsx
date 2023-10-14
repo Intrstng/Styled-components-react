@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import myTheme from '../styles/Theme.styled';
 
 const BtnWrapper = styled.div `
   display: flex;
